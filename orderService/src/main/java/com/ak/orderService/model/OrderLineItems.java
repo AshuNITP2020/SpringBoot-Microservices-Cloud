@@ -1,12 +1,14 @@
 package com.ak.orderService.model;
 
 import lombok.*;
-import org.springframework.data.mongodb.core.mapping.Document;
+//import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
-@Document(value = "orderLineItems")
+//@Document(value = "orderLineItems")
+@Entity
+@Table(name = "orderLineItems")
 @Data
 @Builder
 @AllArgsConstructor

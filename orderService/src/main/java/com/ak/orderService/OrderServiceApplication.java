@@ -9,12 +9,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
-//@ComponentScan(basePackages = "com.ak.orderService.repository" +
-		//"com.ak.orderService.service")
+@ComponentScan(basePackages = "com.ak.orderService.repository" +
+		"com.ak.orderService.service")
 @EntityScan(basePackages = "com.ak.orderService.model")
 public class OrderServiceApplication {
-
 	public static void main(String[] args) {
+		System.out.println("base");
 
 		SpringApplication.run(OrderServiceApplication.class, args);
 	}

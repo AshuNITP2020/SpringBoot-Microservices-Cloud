@@ -24,6 +24,7 @@ public class OrderService {
     public void placeOrder(OrderRequest orderRequest){
         Order order = new Order();
         order.setOrderNumber(UUID.randomUUID().toString());
+        System.out.println("service");
 
         List<OrderLineItems> orderLineItems = orderRequest.getOrderLineItemsdtoList()
                 .stream()
